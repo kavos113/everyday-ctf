@@ -134,3 +134,16 @@ payload += p64(0x4006f0)
 conn.sendlineafter('> ', payload)
 conn.interactive()
 ```
+
+## OMAKE
+encrypted_flag: 
+```
+00000000  53 4d 53 41 91 d9 f5 a6  8a d5 c5 b7 db db 9d be  |SMSA............|
+00000010  ca da b2 ed 2a 84 63 bc  71 b5 70 a0 7c 79 3e 5d  |....*.c.q.p.|y>]|
+```
+
+true flag: 
+```
+00000000  52 4f 50 45 7b 61 5f 70  6c 61 63 65 68 6f 6c 64  |ROPE{a_placehold|
+00000010  65 72 5f 33 32 62 79 74  65 5f 66 6c 61 67 21 7d  |er_32byte_flag!}|
+```
