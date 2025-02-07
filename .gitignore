@@ -1,6 +1,9 @@
 *
 
+!*/
+
 !*.md
 !*.py
 !*.txt
 !*.asm
+!.gitignore
