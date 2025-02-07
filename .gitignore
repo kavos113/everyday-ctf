@@ -1,3 +1,6 @@
-.gdb_history
-core.*
-*.zip
+*
+
+!*.md
+!*.py
+!*.txt
+!*.asm
