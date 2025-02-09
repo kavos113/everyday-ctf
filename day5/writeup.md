@@ -2,7 +2,7 @@
 
 ## Information
 
-almost same as 'write4'
+write4と大体同じ
 
 compare badchars: 'x', 'g', 'a', '.' as '0x78', '0x67', '0x61', '0x2e' -> 0xeb
 
@@ -13,7 +13,7 @@ compare badchars: 'x', 'g', 'a', '.' as '0x78', '0x67', '0x61', '0x2e' -> 0xeb
 4. set rdi: 0x601028
 5. call `print_file`: 0x400510
 
-'flag.txt': a, g, . are badchars
+'flag.txt': `a`, `g`, `.`, `x` are badchars 
 
 ### usefulGadgets
 ```asm
@@ -30,10 +30,12 @@ compare badchars: 'x', 'g', 'a', '.' as '0x78', '0x67', '0x61', '0x2e' -> 0xeb
 
 [r15] = [r15] ^ r14b
 
+```
 f  l  a  g  .  t  x  t
 66 6c 61 67 2e 74 78 74
 66 6c 62 68 62 74 79 74
       -1 -1-34    -1
+```
 
 ### Gadget
 ```asm

@@ -82,7 +82,7 @@ fclose(f);
 puts("callme_one() called correctly");
 ```
 
-need: callme_one -> callme_two -> callme_three
+この順番で呼ぶ: callme_one -> callme_two -> callme_three
 
 ## Solution
 call functions by plt

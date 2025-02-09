@@ -52,7 +52,7 @@ Stripped:   No
  9cd:	c9                   	leave
  9ce:	c3                   	ret
 ```
-rdi = 1st argument: file name, expected to be "flag.txt"
+rdi = 第1引数でファイル名 これを"flag.txt"にしたい
 
 ### usefulGadgets
 ```asm
@@ -98,7 +98,7 @@ nth paddr        size vaddr       vsize perm type        name
 27  0x00001680  0x1f6 0x00000000  0x1f6 ---- STRTAB      .strtab
 28  0x00001876  0x103 0x00000000  0x103 ---- STRTAB      .shstrtab
 ```
-write to 0x601028?
+0x601028に書き込めばよさそうかな
 
 ## Solution
 

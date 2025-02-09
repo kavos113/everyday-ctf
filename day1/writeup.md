@@ -13,7 +13,7 @@ Stripped:   No
 ### Solution
 ret2win function: 0x400756
 
-after read, stack:
+read後のスタック:
 ```
 00:0000│ rsi rsp 0x7fffffffdc20 ◂— 'aaaaaaa\n'
 01:0008│-018     0x7fffffffdc28 ◂— 0
@@ -21,9 +21,9 @@ after read, stack:
 04:0020│ rbp     0x7fffffffdc40 —▸ 0x7fffffffdc50 
 05:0028│+008     0x7fffffffdc48 —▸ 0x4006d7 (main+64) 
 ```
-so, 0x28 chars and '0x400756' needed.
+0x28文字+'0x400756'
 
-but, to avoid stack alignment constraint, return to any `ret` interaction.
+スタックアラインメント制約を回避するために，適当な`ret`に飛ばす
 
 ### Script
 ```python
